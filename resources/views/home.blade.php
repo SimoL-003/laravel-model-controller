@@ -16,7 +16,7 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 py-4 g-4">
             @foreach ($movies as $movie)
                 <div class="col">
-                    <x-movie-card :movieTitle="$movie['title']" :movieOriginalTitle="$movie['original_title']" />
+                    <x-movie-card :movieTitle="$movie['title']" :movieOriginalTitle="$movie['original_title']" :year="$movie->getDate()" />
                 </div>
             @endforeach
         </div>

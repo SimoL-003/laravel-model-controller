@@ -13,7 +13,8 @@ class MovieCard extends Component
      */
     public function __construct(
         public string $movieTitle,
-        public string $movieOriginalTitle
+        public string $movieOriginalTitle,
+        public string $year
     ) {
     }
 
