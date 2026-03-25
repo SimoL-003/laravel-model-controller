@@ -5,16 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 </head>
 
 <body>
-    <h1>
-        <ul>
+    <section class="container-lg mt-5">
+        <h1 class="text-center">Catalogo Film</h1>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 py-4 g-4">
             @foreach ($movies as $movie)
-                <li>{{ $movie['title'] }}</li>
+                <div class="col">
+                    <x-movie-card :movieTitle="$movie['title']" :movieOriginalTitle="$movie['original_title']" />
+                </div>
             @endforeach
-        </ul>
-    </h1>
+        </div>
+    </section>
 </body>
 
 </html>
